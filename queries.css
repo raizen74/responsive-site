@@ -1,0 +1,236 @@
+/* In media queries 1 rem != 10px */
+/* 1 rem = 1em = 16px */
+
+/******************************************/
+/* BELOW 1100px (Landscape tablets) */
+/******************************************/
+/* 1100/16 = 69 */
+@media (max-width: 69em) {
+  html {
+    /* 9px / 16px */
+    font-size: 56.25%;
+  }
+  .hero {
+    gap: 4.8rem;
+  }
+  .grid {
+    column-gap: 4.8rem;
+    row-gap: 8rem;
+  }
+  .projects-heading {
+    font-size: 3.6rem;
+  }
+  .projects-heading-secondary {
+    font-size: 2.4rem;
+  }
+  .header {
+    padding: 0 3.2rem;
+  }
+}
+
+/*************************/
+/* BELOW 944px (tablets) */
+/*************************/
+
+@media (max-width: 59em) {
+  html {
+    /* 8px / 16px = 0.5 = 50% */
+    font-size: 50%;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 0 8rem;
+    gap: 6.4rem;
+  }
+  .hero-text-box,
+  .hero-img-box {
+    text-align: center;
+  }
+  .hero-img {
+    width: 60%;
+  }
+  /* .projects-number {
+    font-size: 7.4rem;
+  } */
+  .award {
+    /* 3/5 = 60% + 2/5 */
+    grid-template-columns: 1fr; /* One column */
+    grid-template-rows: 1fr 1fr; /* Two rows */
+  }
+  .award-img-box {
+    grid-row: 1;
+  }
+
+  /* MOBILE NAVIGATION */
+  .btn-mobile-nav {
+    display: block;
+    z-index: 9999;
+  }
+
+  .main-nav {
+    background-color: rgba(5, 23, 39, 0.9);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    /*relative to the viewport*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Occupy the entire viewport */
+    height: 100vh;
+    transform: translateX(100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+
+    /* Hide navigation*/
+    /* Allow NO transitions at all */
+    /* display: none; */
+
+    /* HIDE THE ELEMENT WITHOUT USING display: none */
+    /* 1) Hide it visually */
+    opacity: 0;
+
+    /* 2) Make it unaccessible to mouse and keyboard */
+    pointer-events: none;
+
+    /* 3) Hide it from screen readers */
+    visibility: hidden;
+  }
+
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3rem;
+  }
+}
+
+/*************************/
+/* BELOW 704px (Smaller tablets) */
+/*************************/
+/* 704/16 = 44 */
+@media (max-width: 44em) {
+  .heading-section {
+    font-size: 3.6rem;
+    margin-bottom: 4.8rem;
+  }
+}
+
+/*************************/
+/* BELOW 544px (Phones) */
+/*************************/
+/* A lot of phones are around 350 - 450  */
+
+@media (max-width: 34em) {
+  /* .section-title {
+    padding: 8rem 0 3.2rem 0;
+  } */
+
+  .heading-section {
+    margin-bottom: 2.4rem;
+  }
+
+  .grid {
+    row-gap: 6.4rem;
+    grid-template-columns: 1fr;
+  }
+
+  .grid--6-cols {
+    gap: 0;
+  }
+
+  .associate-cert {
+    grid-column: span 3;
+  }
+
+  .associate-cert:last-child {
+    grid-column: span 6;
+  }
+
+  figure img {
+    transform: scale(0.8);
+  }
+
+  .cert-badge img:hover {
+    transform: scale(0.9); /*scale images*/
+  }
+  .associate-cert img:hover {
+    transform: scale(0.85); /*scale images*/
+  }
+
+  .btn,
+  .btn:link,
+  .btn:visited {
+    padding: 2.4rem 1.6rem;
+  }
+
+  .section-hero {
+    padding: 2.4rem 0 6.4rem 0;
+  }
+
+  .section {
+    padding: 3.2rem 0 1.2rem 0;
+  }
+
+  .hero {
+    padding: 0 3.2rem;
+  }
+
+  .hero-img {
+    width: 80%;
+  }
+  /* child of the parent element of .step-img-box */
+  .projects-img-box:nth-child(2) {
+    grid-row: 1;
+  }
+
+  .projects-img-box:nth-child(6) {
+    grid-row: 5;
+  }
+
+  .projects-img-box:nth-child(10) {
+    grid-row: 9;
+  }
+
+  .projects-img-box {
+    /* Move down the images to its container text */
+    transform: translateY(3.2em);
+  }
+
+  .award-text {
+    padding: 3.2rem;
+  }
+
+  .paper-title {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+}
+/* 
+- FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta
+      name="description"
+      content="David Galera personal site, Software and Artificial Intelligence engineer."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="img/favicon-64.png" />
+    <!-- Add a website to the IOS home screen -->
+    <link rel="apple-touch-icon" href="img/favicon-180.png" />
+    <!-- The same for Android -->
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="queries.css" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!-- SAFARI SMOOTH SCROLL -->
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
+
+    <script
+      defer
+      type="text/javascript"
+      async
+      src="//cdn.credly.com/assets/utilities/embed.js"
+    ></script>
+
+    <script defer src="script.js"></script>
+
+    <title>David &mdash; Personal Site</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a class="main-nav-link" href="#projects">Projects</a></li>
+          <li>
+            <a class="main-nav-link" href="#certifications">Certifications</a>
+          </li>
+          <li>
+            <a class="main-nav-link nav-award" href="#publications"
+              >Publications</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+    </header>
+
+    <main>
+      <section class="section-hero">
+        <div class="hero">
+          <div class="hero-text-box">
+            <h1 class="heading-primary">David Galera</h1>
+            <h2 class="heading-secondary">Software Engineer</h2>
+            <p class="hero-description">
+              I define myself as a versatile software engineer. Having an
+              engineering background, I have passion for
+              <strong>building systems</strong>. I have experience developing
+              <em>REST</em> and <em>Websocket APIs</em> in
+              <strong>AWS</strong> as well as microservices architectures
+              written in <strong>Python</strong> that implement generative AI
+              and NLP and integrate with other AWS services. I also hold a
+              master's degree in <strong>Data Science</strong> and developed
+              many <strong>ML</strong> projects.
+            </p>
+            <!-- buttons should only be used for actions, anchors for going to another corner of the page -->
+            <a
+              href="https://www.datacamp.com/portfolio/raizen74"
+              class="btn btn--full margin-right-sm"
+              >Datacamp portfolio &rarr;</a
+            >
+            <!-- &rarr -->
+            <a
+              href="https://www.linkedin.com/in/david-galera-alfaro/"
+              class="btn btn--outline"
+              >LinkedIn</a
+            >
+          </div>
+          <div class="hero-img-box">
+            <img
+              src="img/zurich.webp"
+              class="hero-img"
+              alt="Myself in Zurich, standing in front of the river."
+            />
+          </div>
+        </div>
+      </section>
+      <!-- PROJECTS -->
+      <section class="section-title" id="projects">
+        <div class="container">
+          <!-- h3 is used to describe h2 -->
+          <h2 class="heading-section">Portfolio projects</h2>
+        </div>
+        <div class="container grid">
+          <!-- PROJECT 1 -->
+          <div class="projects-text-box">
+            <p class="projects-number">01</p>
+            <h3 class="heading-section-secondary">
+              MaxSAT optimal correlation clustering
+            </h3>
+            <p class="projects-description">
+              <em>CORRCLUSTERING ∈ NP</em><br />In this project, I created an
+              instance of the CORRCLUSTERING problem and performed a
+              polynomial-time reduction to SAT. I obtained a propositional
+              formula by reducing the problem to the HARD and SOFT clauses
+              described in the paper published in 2013 by
+              <strong>Jeremias Berg</strong> and
+              <strong>Matti Järvisalo</strong> titled
+              <em>Optimal Correlation Clustering via MaxSAT</em>. Finally, I
+              applied a MaxSAT Solver to obtain a Maximum SATisfiability
+              resulting clustering.
+            </p>
+            <a
+              href="https://github.com/raizen74/MaxSAT-Clustering"
+              class="btn btn--full margin-right-sm"
+              >Learn more</a
+            >
+          </div>
+          <div class="projects-img-box">
+            <img
+              src="img/sat.webp"
+              alt="Pile of cans with binary numbers."
+              class="project-img"
+            />
+          </div>
+          <!-- PROJECT 2 -->
+          <div class="projects-img-box">
+            <img src="img/nn.webp" alt="3D network" class="project-img" />
+          </div>
+          <div class="projects-text-box">
+            <p class="projects-number">02</p>
+            <h3 class="heading-section-secondary">
+              NeuralNet for manufacturing control data
+            </h3>
+            <p class="projects-description">
+              <strong>Kaggle</strong> competition project. Given a balanced
+              dataset, consisting of 900.000 instances with 33 features from
+              manufacturing control data, I built a neural network using
+              <em>keras</em> to predict the binary output. I applied feature
+              engineering and feature interaction to spot patterns and transform
+              the data to achieve <strong>97.4% accuracy</strong> in the
+              competition.
+            </p>
+            <a
+              href="https://github.com/raizen74/Kaggle-NN"
+              class="btn btn--full margin-right-sm"
+              >Learn more</a
+            >
+          </div>
+          <!-- PROJECT 3 -->
+          <div class="projects-text-box">
+            <p class="projects-number">03</p>
+            <h3 class="heading-section-secondary">
+              Computer vision applied to CIFAR-10
+            </h3>
+            <p class="projects-description">
+              Image classification of the CIFAR-10 dataset using deep learning
+              and the <em>fastai</em>
+              library. I used transfer learning with resnet34 and resnet50
+              pretrained CNNs. I applied data augmentation techniques such as
+              mixup.
+            </p>
+            <a
+              href="https://github.com/raizen74/Transfer-learning"
+              class="btn btn--full margin-right-sm"
+              >Learn more</a
+            >
+          </div>
+          <div class="projects-img-box">
+            <img
+              src="img/AI.webp"
+              alt="Microchip with AI logo"
+              class="project-img"
+            />
+          </div>
+          <!-- PROJECT 4 -->
+          <div class="projects-img-box">
+            <img
+              src="img/blockbuster.webp"
+              alt="Black and white image of racks with DVD films"
+              class="project-img"
+            />
+          </div>
+          <div class="projects-text-box">
+            <p class="projects-number">04</p>
+            <h3 class="heading-section-secondary">Movie recommender engine</h3>
+            <p class="projects-description">
+              Recommender system on the <strong>movielens</strong> dataset
+              implemented in Python. I implemented 4 recommendation approaches:
+            </p>
+            <ul class="projects-description">
+              <li>- Non personalized</li>
+              <li>
+                - Content based, a Naive Bayes spam filter is also implemented.
+              </li>
+              <li>- Colaborative filtering, item-item and user-user.</li>
+              <li>
+                - Colaborative filtering using the Python surprise library.
+              </li>
+            </ul>
+            <a
+              href="https://github.com/raizen74/Recommender-systems"
+              class="btn btn--full margin-right-sm"
+              >Learn more</a
+            >
+          </div>
+          <!-- PROJECT 5 -->
+          <div class="projects-text-box">
+            <p class="projects-number">05</p>
+            <h3 class="heading-section-secondary">Density estimation</h3>
+            <p class="projects-description">
+              This project consists of 2 parts. In the first one, I estimate the
+              probability density function of
+              <strong>univariate data</strong> using
+              <em>kernel methods</em> (non-parametric) . I fit the kernel
+              bandwidth using 2 approaches: <em>MISE</em> and
+              <em>K-Fold cross-validation</em>.<br />
+              In the second part, I fit a <em>Gaussian Mixture</em> to
+              <strong>multivariate data</strong> from diabetes patients, tunning
+              the covariance type and number of components with K-Fold CV.
+            </p>
+            <a
+              href="https://github.com/raizen74/Density-estimation"
+              class="btn btn--full margin-right-sm"
+              >Learn more</a
+            >
+          </div>
+          <div class="projects-img-box">
+            <img
+              src="img/cluster.webp"
+              alt="Space with stars forming clusters"
+              class="project-img"
+            />
+          </div>
+          <!-- PROJECT 6 -->
+          <div class="projects-img-box">
+            <img
+              src="img/labyrinth.webp"
+              alt="Top view of a round labyrinth with grass"
+              class="project-img"
+            />
+          </div>
+          <div class="projects-text-box">
+            <p class="projects-number">06</p>
+            <h3 class="heading-section-secondary">Labyrinth</h3>
+            <p class="projects-description">
+              The goal of this project is to design an
+              <strong>efficient algorithm</strong>
+              that returns the minimum number of moves required by an object to
+              traverse a rectangular input grid, from the top left corner
+              to the bottom right corner. The grid is a matrix with some blocked
+              cells and the object is a rod composed of 3 adjacent cells that
+              can rotate by its center cell under some conditions. Only Python
+              builtin classes are allowed.
+            </p>
+            <a
+              href="https://github.com/raizen74/labyrinth"
+              class="btn btn--full margin-right-sm"
+              >Learn more</a
+            >
+          </div>
+        </div>
+      </section>
+      <!-- CERTIFICATIONS -->
+      <section class="section-title" id="certifications">
+        <div class="container">
+          <!-- h3 is used to describe h2 -->
+          <h2 class="heading-section center">Certifications</h2>
+        </div>
+        <div class="container grid--6-cols">
+          <div class="aws">
+            <div
+              class="aws-badge"
+              data-iframe-width="270"
+              data-iframe-height="290"
+              data-share-badge-id="f98a5e40-2322-44ed-8cd2-e82469df989c"
+              data-share-badge-host="https://www.credly.com"
+            ></div>
+          </div>
+
+          <figure class="cert-badge">
+            <img
+              src="img/data-scientist-professional-badge.svg"
+              alt="Data Scientist professional badge - Datacamp"
+            />
+          </figure>
+
+          <figure class="cert-badge">
+            <img
+              src="img/data-analyst-professional-badge.svg"
+              alt="Data Analyst professional badge - Datacamp"
+            />
+          </figure>
+
+          <figure class="associate-cert">
+            <img
+              src="img/DS_Associate_-_badge_with_outline.png"
+              alt="Data Scientist associate badge - Datacamp"
+            />
+          </figure>
+
+          <figure class="associate-cert">
+            <img
+              src="img/DA_Associate_-_badge_with_outline.png"
+              alt="Data Analyst associate badge - Datacamp"
+            />
+          </figure>
+
+          <figure class="associate-cert">
+            <img
+              src="img/DE_Associate_-_badge_with_outline.png"
+              alt="Data Engineer associate badge - Datacamp"
+            />
+          </figure>
+        </div>
+      </section>
+      <!-- PUBLICATIONS AND AWARDS -->
+      <section class="section-title" id="publications">
+        <div class="container">
+          <span class="subheading">Master thesis</span>
+          <!-- h3 is used to describe h2 -->
+          <h2 class="heading-section">IEC award & AIME conference paper</h2>
+          <div class="award">
+            <div class="award-text">
+              <p>
+                I received the Catalan society of technology award, presented by
+                Institut d'Estudis Catalans (IEC) for my master's thesis, titled
+                <em
+                  >Frequent patterns of childhood overweight from longitudinal
+                  data on parental and early-life of infants health</em
+                >.<br />A <strong>data science project</strong> that I carried
+                out in collaboration with the
+                <em>Institut d'investigació biòmedica de Girona</em> and from
+                which we published the following conference paper at
+                <strong>AIME '24</strong> conference.
+              </p>
+            </div>
+            <div
+              class="award-img-box"
+              role="img"
+              aria-label="People showing an award from Institut d'Estudis Catalans"
+            ></div>
+          </div>
+          <div>
+            <h3 class="paper-title">
+              Frequent patterns of childhood overweight from longitudinal data
+              on parental and early-life of infants health
+            </h3>
+            <p class="projects-description">
+              Published in
+              <em>22nd International Conference on AI in Medicine (AIME 24)</em
+              >, Sant Lake City, Utah, US, July 7-12th, 2024.
+            </p>
+            <p class="projects-description">
+              In this work, frequent pattern mining is used to find the risk
+              factors of childhood obesity, taking into account the relationship
+              among the data gathered in different visits. The experiments
+              carried out on the data collected from 386 children from Girona
+              and Figueres (Spain) demonstrate the relevance of discriminant
+              frequent patterns for childhood overweight prediction.
+            </p>
+            <p class="projects-description">
+              Recommended citation: López, B., Galera, D., López-Bermejo, A.,
+              Bassols, J. (2024). Frequent Patterns of Childhood Overweight from
+              Longitudinal Data on Parental and Early-Life of Infants Health.
+              In: Finkelstein, J., Moskovitch, R., Parimbelli, E. (eds)
+              Artificial Intelligence in Medicine. AIME 2024. Lecture Notes in
+              Computer Science(), vol 14844. Springer, Cham.<br />
+              <a
+                href="https://doi.org/10.1007/978-3-031-66538-7_7"
+                class="projects-description"
+                >https://doi.org/10.1007/978-3-031-66538-7_7</a
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="copyright">
+        Copyright &copy; <span class="year">2027</span>. All rights reserved.
+      </p>
+    </footer>
+  </body>
+</html>
