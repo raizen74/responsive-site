@@ -160,6 +160,10 @@
     gap: 0;
   }
 
+  .aws {
+    grid-column: span 6;
+  }
+
   .associate-cert {
     grid-column: span 3;
   }

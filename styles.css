@@ -170,7 +170,6 @@ strong {
   margin-top: 9.6rem;
 }
 
-
 /******************************************/
 /* HERO SECTION */
 /******************************************/
@@ -318,6 +317,7 @@ strong {
 ul {
   list-style: none;
 }
+
 .projects-img-box {
   display: flex;
   justify-content: center; /* Center the image horizontally
@@ -349,7 +349,7 @@ ul {
 }
 
 .aws {
-  grid-column: span 6;
+  grid-column: span 3;
 }
 
 .cert-badge {
@@ -373,10 +373,6 @@ ul {
  {
   transform: scale(1.1); /*scale images*/
 }
-
-
-
-
 
 /******************************************/
 /* AWARD */
