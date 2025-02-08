@@ -348,6 +348,10 @@ ul {
   row-gap: 3.2rem;
 }
 
+.lpic {
+  grid-column: span 6;
+}
+
 .aws {
   grid-column: span 3;
 }

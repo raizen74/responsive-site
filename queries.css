@@ -160,7 +160,7 @@
     gap: 0;
   }
 
-  .aws {
+  .lpic, .aws {
     grid-column: span 6;
   }
 
