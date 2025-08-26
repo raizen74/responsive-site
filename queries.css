@@ -204,7 +204,7 @@
   .hero-img {
     width: 80%;
   }
-  /* child of the parent element of .step-img-box */
+  /* Select odd project images and move them below its text */
   .projects-img-box:nth-child(2) {
     grid-row: 1;
   }
@@ -217,8 +217,12 @@
     grid-row: 9;
   }
 
+  .projects-img-box:nth-child(14) {
+    grid-row: 13;
+  }
+
+  /* Move down the images to its container text */
   .projects-img-box {
-    /* Move down the images to its container text */
     transform: translateY(3.2em);
   }
 
