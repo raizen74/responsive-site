@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -75,22 +75,21 @@
         <div class="hero">
           <div class="hero-text-box">
             <h1 class="heading-primary">David Galera</h1>
-            <h2 class="heading-secondary">
-              Senior Software Engineer, AI
-            </h2>
+            <h2 class="heading-secondary">Senior Software Engineer, AI</h2>
             <p class="hero-description">
               I am a software engineer specializing in backend development on
               <strong>AWS</strong>, with expertise in building scalable
               applications integrating ML and genAI. I design and develop
-              intelligent systems and architect and deploy them on AWS, leveraging services
-              such as EC2, ECS, S3, Lambda, DynamoDB, SQS and Bedrock. Exposing
-              services through API Gateway using both <strong>REST</strong> and
-              <strong>WebSocket</strong> protocols, ensuring seamless real-time
-              and asynchronous communication. I bring together cutting-edge AI
-              capabilities and robust cloud architecture to deliver impactful,
-              future-ready solutions that meet complex business needs. I also
-              hold a master's degree in <strong>Data Science</strong> and have
-              completed <strong>+130 courses</strong> at Datacamp.
+              intelligent systems and architect and deploy them on AWS,
+              leveraging services such as EC2, ECS, S3, Lambda, DynamoDB, SQS
+              and Bedrock. Exposing services through API Gateway using both
+              <strong>REST</strong> and <strong>WebSocket</strong> protocols,
+              ensuring seamless real-time and asynchronous communication. I
+              bring together cutting-edge AI capabilities and robust cloud
+              architecture to deliver impactful, future-ready solutions that
+              meet complex business needs. I also hold a master's degree in
+              <strong>Data Science</strong> and have completed
+              <strong>+130 courses</strong> at Datacamp.
             </p>
             <!-- buttons should only be used for actions, anchors for going to another corner of the page -->
             <a
@@ -138,14 +137,14 @@
               <strong>Domain-Driven Architecture</strong> with the
               <strong>Repository Pattern</strong>, the system uses open source
               AI models from <strong>HuggingFace</strong> for serving diverse AI
-              tasks including text generation via <em>TinyLlama</em>, image synthesis
-              with <em>Stable Diffusion</em>, and audio/video generation. Leveraging
+              tasks including text generation via <em>TinyLlama</em>, image
+              synthesis with <em>Stable Diffusion</em>, and audio/video
+              generation. Leveraging
               <strong>Retrieval-Augmented Generation (RAG)</strong>, it
               integrates asynchronous PDF processing and
               <strong>Jina AI embeddings</strong> for semantic search, while
-              managing scalable model serving through
-              BentoML and providing real-time usage monitoring,
-              JWT-based authentication and
+              managing scalable model serving through BentoML and providing
+              real-time usage monitoring, JWT-based authentication and
               <strong>Alembic</strong>
               for robust database schema migrations.
             </p>
@@ -158,7 +157,7 @@
           <div class="projects-img-box">
             <img
               src="img/fastapi.webp"
-              alt="Pile of cans with binary numbers."
+              alt="Collage of logos from FastAPI, PostgreSQL, Qdrant, HuggingFace and Streamlit."
               class="project-img"
             />
           </div>
@@ -167,7 +166,7 @@
           <div class="projects-img-box">
             <img
               src="img/chatter.webp"
-              alt="Pile of cans with binary numbers."
+              alt="Collage of logos from NestJS, MongoDB, Apollo, and React."
               class="project-img"
             />
           </div>
@@ -199,6 +198,47 @@
           <div class="projects-text-box">
             <p class="projects-number">03</p>
             <h3 class="heading-section-secondary">
+              Rust web application with Warp and Tokio
+            </h3>
+            <p class="projects-description">
+              High-performance Question & Answer (Q&A) web API built with
+              <strong>Rust</strong>, taking advantage of the language's
+              <strong>type system correctness</strong> and
+              <strong>memory safety</strong>. Featuring the
+              lightning-fast <strong>Warp web framework</strong>,
+              <strong>Tokio async runtime</strong>, and PostgreSQL persistence.
+              The app includes robust authentication using
+              <strong>PASETO</strong> tokens, automatic profanity filtering via
+              the Bad Words API, and comprehensive error handling. The project
+              compiles to a <strong>statically linked binary</strong> (musl
+              target) that results in a
+              <strong>Docker scratch image of 25 MB</strong> (compressed) with
+              minimal <strong>memory consumption of ~10 MB</strong> at runtime.
+              The API supports full CRUD operations on questions and answers
+              with token-based authentication, paginated queries, and
+              <strong>tracing/logging</strong> for production visibility.
+            </p>
+            <a
+              href="https://github.com/raizen74/rust-warp"
+              class="btn btn--full margin-right-sm"
+              >Learn more</a
+            >
+          </div>
+          <div class="projects-img-box">
+            <img
+              src="img/rust.webp"
+              alt="Collage with logos of Rust, Tokio, Docker and PostgreSQL"
+              class="project-img"
+            />
+          </div>
+
+          <!-- PROJECT 4 -->
+          <div class="projects-img-box">
+            <img src="img/nn.webp" alt="3D network" class="project-img" />
+          </div>
+          <div class="projects-text-box">
+            <p class="projects-number">04</p>
+            <h3 class="heading-section-secondary">
               NeuralNet for manufacturing control data
             </h3>
             <p class="projects-description">
@@ -216,20 +256,10 @@
               >Learn more</a
             >
           </div>
-          <div class="projects-img-box">
-            <img src="img/nn.webp" alt="3D network" class="project-img" />
-          </div>
 
-          <!-- PROJECT 4 -->
-          <div class="projects-img-box">
-            <img
-              src="img/AI.webp"
-              alt="Microchip with AI logo"
-              class="project-img"
-            />
-          </div>
+          <!-- PROJECT 5 -->
           <div class="projects-text-box">
-            <p class="projects-number">04</p>
+            <p class="projects-number">05</p>
             <h3 class="heading-section-secondary">
               Computer vision applied to CIFAR-10
             </h3>
@@ -246,10 +276,24 @@
               >Learn more</a
             >
           </div>
+          <div class="projects-img-box">
+            <img
+              src="img/AI.webp"
+              alt="Microchip with AI logo"
+              class="project-img"
+            />
+          </div>
 
-          <!-- PROJECT 5 -->
+          <!-- PROJECT 6 -->
+          <div class="projects-img-box">
+            <img
+              src="img/blockbuster.webp"
+              alt="Black and white image of racks with DVD films"
+              class="project-img"
+            />
+          </div>
           <div class="projects-text-box">
-            <p class="projects-number">05</p>
+            <p class="projects-number">06</p>
             <h3 class="heading-section-secondary">Movie recommender engine</h3>
             <p class="projects-description">
               Recommender system on the <strong>movielens</strong> dataset
@@ -271,24 +315,10 @@
               >Learn more</a
             >
           </div>
-          <div class="projects-img-box">
-            <img
-              src="img/blockbuster.webp"
-              alt="Black and white image of racks with DVD films"
-              class="project-img"
-            />
-          </div>
 
-          <!-- PROJECT 6 -->
-          <div class="projects-img-box">
-            <img
-              src="img/cluster.webp"
-              alt="Space with stars forming clusters"
-              class="project-img"
-            />
-          </div>
+          <!-- PROJECT 7 -->
           <div class="projects-text-box">
-            <p class="projects-number">06</p>
+            <p class="projects-number">07</p>
             <h3 class="heading-section-secondary">Density estimation</h3>
             <p class="projects-description">
               This project consists of 2 parts. In the first one, I estimate the
@@ -307,10 +337,24 @@
               >Learn more</a
             >
           </div>
+          <div class="projects-img-box">
+            <img
+              src="img/cluster.webp"
+              alt="Space with stars forming clusters"
+              class="project-img"
+            />
+          </div>
 
-          <!-- PROJECT 7 -->
+          <!-- PROJECT 8 -->
+          <div class="projects-img-box">
+            <img
+              src="img/labyrinth.webp"
+              alt="Top view of a round labyrinth with grass"
+              class="project-img"
+            />
+          </div>
           <div class="projects-text-box">
-            <p class="projects-number">07</p>
+            <p class="projects-number">08</p>
             <h3 class="heading-section-secondary">Labyrinth</h3>
             <p class="projects-description">
               The goal of this project is to design an
@@ -328,24 +372,10 @@
               >Learn more</a
             >
           </div>
-          <div class="projects-img-box">
-            <img
-              src="img/labyrinth.webp"
-              alt="Top view of a round labyrinth with grass"
-              class="project-img"
-            />
-          </div>
 
-          <!-- PROJECT 8 -->
-          <div class="projects-img-box">
-            <img
-              src="img/sat.webp"
-              alt="Pile of cans with binary numbers."
-              class="project-img"
-            />
-          </div>
+          <!-- PROJECT 9 -->
           <div class="projects-text-box">
-            <p class="projects-number">08</p>
+            <p class="projects-number">09</p>
             <h3 class="heading-section-secondary">
               MaxSAT optimal correlation clustering
             </h3>
@@ -366,6 +396,13 @@
               class="btn btn--full margin-right-sm"
               >Learn more</a
             >
+          </div>
+          <div class="projects-img-box">
+            <img
+              src="img/sat.webp"
+              alt="Pile of cans with binary numbers."
+              class="project-img"
+            />
           </div>
         </div>
       </section>
