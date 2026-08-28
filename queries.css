@@ -205,20 +205,24 @@
     width: 80%;
   }
   /* Select odd project images and move them below its text */
-  .projects-img-box:nth-child(2) {
-    grid-row: 1;
+  .projects-img-box:nth-child(1) {
+    grid-row: 2;
   }
 
-  .projects-img-box:nth-child(6) {
-    grid-row: 5;
+  .projects-img-box:nth-child(5) {
+    grid-row: 6;
   }
 
-  .projects-img-box:nth-child(10) {
-    grid-row: 9;
+  .projects-img-box:nth-child(9) {
+    grid-row: 10;
   }
 
-  .projects-img-box:nth-child(14) {
-    grid-row: 13;
+  .projects-img-box:nth-child(12) {
+    grid-row: 14;
+  }
+
+    .projects-img-box:nth-child(17) {
+    grid-row: 18;
   }
 
   /* Move down the images to its container text */
