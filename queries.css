@@ -205,6 +205,13 @@
     width: 80%;
   }
   /* Select odd project images and move them below its text */
+  /* Each project uses two children:
+
+Project 1 image
+Project 1 text
+Project 2 text
+Project 2 image
+Project 3 image */
   .projects-img-box:nth-child(1) {
     grid-row: 2;
   }

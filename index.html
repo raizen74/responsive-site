@@ -137,27 +137,27 @@
             </h3>
             <p class="projects-description">
               Full stack to-do application compiled into a
-              <strong>single Rust binary</strong>. Featuring a
-              <strong>to-do</strong>, <strong>auth</strong> and
-              <strong>session cache</strong> nanoservices. A
-              <strong>kernel crate</strong> exposes part of the auth
-              functionality required to guard the to-do views. The flexibility
-              of the kernel design makes possible 2 deployment strategies based
-              on the kernel feature compiled into the target workspace, no
-              source changes. The complete app is served from the
+              <strong>single Rust binary</strong>, featuring
+              <strong>to-do</strong> and <strong>auth</strong> nanoservices. The
+              communication between nanoservices is implemented in a
+              <strong>kernel crate</strong> whose flexible design makes possible
+              2 deployment strategies without changing the source code,
+              depending on which kernel feature compiled into the target
+              workspace. The complete app is served from the
               <strong>ingress workspace</strong>, which acts as a
               <strong>modular monolith</strong> where the views from both
-              servers are mounted, it also embeds the frontend assets.
+              servers are mounted, the
+              <strong>frontend assets are embedded</strong> into the ingress as
+              well.
             </p>
             <p class="projects-description">
-              The project also features a <strong>Redis</strong> cache executing
-              a <strong>Rust dynamic library</strong> that stores the JWT
-              decoded <code>unique_id</code> to <code>user_id</code> mapping and
-              performs custom
-              <strong>client session validation logic inside Redis</strong>. The
-              kernel interfaces with the cache-client crate for Redis
-              interaction, exposing traits to set the redis key when the user
-              login and update it in every to-do route access.
+              The project also features a <strong>Redis</strong> cache which loads
+              a <strong>Rust dynamic library</strong>
+              to execute
+              <strong>client session validation logic inside Redis</strong> and
+              manage JWT expiration. The kernel interfaces with the cache-client
+              crate for Redis interaction, exposing traits to set the redis key
+              when the user login and update it in every route access.
             </p>
             <a
               href="https://github.com/raizen74/rust-todo"
