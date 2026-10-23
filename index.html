@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta
       name="description"
-      content="David Galera personal site, Software and Artificial Intelligence engineer."
+      content="David Galera personal site, Senior AI Engineer."
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -75,14 +75,15 @@
         <div class="hero">
           <div class="hero-text-box">
             <h1 class="heading-primary">David Galera</h1>
-            <h2 class="heading-secondary">Senior Software Engineer, AI</h2>
+            <h2 class="heading-secondary">Senior AI Engineer</h2>
             <p class="hero-description">
-              I am a software engineer specializing in backend development on
-              <strong>AWS</strong>, with expertise in building scalable
+              I am a engineer with deep knowledge in software design and
+              architecture, system design on <strong>AWS</strong> and event
+              driven architectures, with expertise in building scalable
               applications integrating ML and genAI. I design and develop
               intelligent systems and architect and deploy them on AWS,
-              leveraging services such as EC2, ECS, S3, Lambda, DynamoDB, SQS
-              and Bedrock. Exposing services through API Gateway using both
+              leveraging services such as EC2, ECS, EKS, S3, Lambda, DynamoDB,
+              SQS and Bedrock. Exposing services through API Gateway using both
               <strong>REST</strong> and <strong>WebSocket</strong> protocols,
               ensuring seamless real-time and asynchronous communication. I
               bring together cutting-edge AI capabilities and robust cloud
@@ -123,13 +124,6 @@
           <!-- ********************************* PROJECTS ****************** -->
 
           <!-- PROJECT 1 -->
-          <div class="projects-img-box">
-            <img
-              src="img/todo-square.webp"
-              alt="Collage of logos from Rust, TypeScript, Docker, Redis, Actix, Tokio and React."
-              class="project-img"
-            />
-          </div>
           <div class="projects-text-box">
             <p class="projects-number">01</p>
             <h3 class="heading-section-secondary">
@@ -142,7 +136,7 @@
               communication between nanoservices is implemented in a
               <strong>kernel crate</strong> whose flexible design makes possible
               2 deployment strategies without changing the source code,
-              depending on which kernel feature compiled into the target
+              depending on the kernel feature compiled into the target
               workspace. The complete app is served from the
               <strong>ingress workspace</strong>, which acts as a
               <strong>modular monolith</strong> where the views from both
@@ -151,8 +145,8 @@
               well.
             </p>
             <p class="projects-description">
-              The project also features a <strong>Redis</strong> cache which loads
-              a <strong>Rust dynamic library</strong>
+              The project also features a <strong>Redis</strong> cache which
+              loads a <strong>Rust dynamic library</strong>
               to execute
               <strong>client session validation logic inside Redis</strong> and
               manage JWT expiration. The kernel interfaces with the cache-client
@@ -165,10 +159,81 @@
               >Learn more</a
             >
           </div>
-
+          <div class="projects-img-box">
+            <img
+              src="img/todo-square.webp"
+              alt="Collage of logos from Rust, TypeScript, Docker, Redis, Actix, Tokio and React."
+              class="project-img"
+            />
+          </div>
           <!-- PROJECT 2 -->
+          <div class="projects-img-box">
+            <img
+              src="img/rust-async.webp"
+              alt="Rust Async runtime architecture diagram."
+              class="project-img"
+            />
+          </div>
           <div class="projects-text-box">
             <p class="projects-number">02</p>
+            <h3 class="heading-section-secondary">Custom Rust Async Runtime</h3>
+            <p class="projects-description">
+              I built a custom runtime to dive deeper into one of the most
+              complex areas in Rust: Asynchronous programming. Breaking down
+              concepts such as <strong>stackless coroutines</strong>,
+              <strong>Futures</strong>, <strong>self-references</strong>, the
+              <code>Pin</code> type and the <code>Unpin</code> trait.
+            </p>
+
+            <ul class="projects-description">
+              <li>
+                - <strong>Executor</strong>: Lives in its own thread and loops
+                popping Futures from a ready queue, constructing a
+                <code>Waker</code> and calling <code>poll</code> on the Top
+                Future and passing the Waker instance, the poll travels down to
+                the Leaf Future carrying the Waker. When the ready queue is
+                empty the thread is <strong>parked</strong>, yielding control to
+                the OS.
+              </li>
+              <li>
+                - <strong>Leaf Future</strong>: Communicates with the Reactor.
+                On the first poll, opens a
+                <strong>non-blocking socket</strong> and sends the request, then
+                registers interest for the <strong>socket</strong> in the
+                Reactor and stores the Waker in it.
+              </li>
+              <li>
+                - <strong>Reactor</strong>: Registers/deregisters descriptors
+                interests into <code>mio::Poll::registry</code> (<code
+                  >epoll</code
+                >
+                on Linux) and owns the <code>Wakers</code>.
+              </li>
+              <li>
+                - <strong>Event loop</strong>: Lives in a separate thread and
+                holds <code>Arc</code>s of the
+                <code>mio::Poll::poll</code> instance and the Wakers. Loops and
+                blocks on <code>epoll_wait</code>. When an OS notification
+                arrives, it pulls the future Waker from the Reactor and calls
+                <code>Waker::wake</code>
+              </li>
+              <li>
+                - <strong>Waker::wake</strong>: Pushes the future into the
+                ready_queue, signaling that it's ready to be polled again to
+                advance to the next state.
+                <strong>Unparks the Executor thread</strong>.
+              </li>
+            </ul>
+            <a
+              href="https://github.com/raizen74/rust-async"
+              class="btn btn--full margin-right-sm"
+              >Learn more</a
+            >
+          </div>
+
+          <!-- PROJECT 3 -->
+          <div class="projects-text-box">
+            <p class="projects-number">03</p>
             <h3 class="heading-section-secondary">
               GenAI services with FastAPI
             </h3>
@@ -206,7 +271,7 @@
             />
           </div>
 
-          <!-- PROJECT 3 -->
+          <!-- PROJECT 4 -->
           <div class="projects-img-box">
             <img
               src="img/chatter.webp"
@@ -215,7 +280,7 @@
             />
           </div>
           <div class="projects-text-box">
-            <p class="projects-number">03</p>
+            <p class="projects-number">04</p>
             <h3 class="heading-section-secondary">
               Real Time Chat web application
             </h3>
@@ -238,20 +303,20 @@
             >
           </div>
 
-          <!-- PROJECT 4 -->
+          <!-- PROJECT 5 -->
           <div class="projects-text-box">
-            <p class="projects-number">04</p>
+            <p class="projects-number">05</p>
             <h3 class="heading-section-secondary">
               Rust web application with Warp and Tokio
             </h3>
             <p class="projects-description">
               High-performance Question & Answer (Q&A) web API built with
               <strong>Rust</strong>, taking advantage of the language's
-              <strong>type system correctness</strong> and
-              <strong>memory safety</strong>. Featuring the lightning-fast
-              <strong>Warp web framework</strong>,
-              <strong>Tokio async runtime</strong>, and PostgreSQL persistence.
-              The app includes robust authentication using
+              <strong>type system correctness</strong>,
+              <strong>efficiency</strong> and <strong>memory safety</strong>.
+              Featuring the lightning-fast <strong>Warp web framework</strong>,
+              the <strong>Tokio async runtime</strong>, and PostgreSQL
+              persistence. The app includes robust authentication using
               <strong>PASETO</strong> tokens, automatic profanity filtering via
               the Bad Words API, and comprehensive error handling. The project
               compiles to a <strong>statically linked binary</strong> (musl
@@ -276,12 +341,12 @@
             />
           </div>
 
-          <!-- PROJECT 5 -->
+          <!-- PROJECT 6 -->
           <div class="projects-img-box">
             <img src="img/nn.webp" alt="3D network" class="project-img" />
           </div>
           <div class="projects-text-box">
-            <p class="projects-number">05</p>
+            <p class="projects-number">06</p>
             <h3 class="heading-section-secondary">
               NeuralNet for manufacturing control data
             </h3>
@@ -301,9 +366,9 @@
             >
           </div>
 
-          <!-- PROJECT 6 -->
+          <!-- PROJECT 7 -->
           <div class="projects-text-box">
-            <p class="projects-number">06</p>
+            <p class="projects-number">07</p>
             <h3 class="heading-section-secondary">
               Computer vision applied to CIFAR-10
             </h3>
@@ -328,7 +393,7 @@
             />
           </div>
 
-          <!-- PROJECT 7 -->
+          <!-- PROJECT 8 -->
           <div class="projects-img-box">
             <img
               src="img/blockbuster.webp"
@@ -337,7 +402,7 @@
             />
           </div>
           <div class="projects-text-box">
-            <p class="projects-number">07</p>
+            <p class="projects-number">08</p>
             <h3 class="heading-section-secondary">Movie recommender engine</h3>
             <p class="projects-description">
               Recommender system on the <strong>movielens</strong> dataset
@@ -360,9 +425,9 @@
             >
           </div>
 
-          <!-- PROJECT 8 -->
+          <!-- PROJECT 9 -->
           <div class="projects-text-box">
-            <p class="projects-number">08</p>
+            <p class="projects-number">09</p>
             <h3 class="heading-section-secondary">Density estimation</h3>
             <p class="projects-description">
               This project consists of 2 parts. In the first one, I estimate the
@@ -389,35 +454,14 @@
             />
           </div>
 
-          <!-- PROJECT 9 -->
+          <!-- PROJECT 10 -->
           <div class="projects-img-box">
             <img
-              src="img/labyrinth.webp"
-              alt="Top view of a round labyrinth with grass"
+              src="img/sat.webp"
+              alt="Pile of cans with binary numbers."
               class="project-img"
             />
           </div>
-          <div class="projects-text-box">
-            <p class="projects-number">09</p>
-            <h3 class="heading-section-secondary">Labyrinth</h3>
-            <p class="projects-description">
-              The goal of this project is to design an
-              <strong>efficient algorithm</strong>
-              that returns the minimum number of moves required by a rod to
-              traverse a rectangular input grid, from the top left corner to the
-              bottom right corner, cells can be blocked and the rod is composed
-              of 3 adjacent cells that can rotate by its center cell if the
-              rotation area does not contain blocked cells. Only Python builtin
-              classes are allowed.
-            </p>
-            <a
-              href="https://github.com/raizen74/labyrinth"
-              class="btn btn--full margin-right-sm"
-              >Learn more</a
-            >
-          </div>
-
-          <!-- PROJECT 10 -->
           <div class="projects-text-box">
             <p class="projects-number">10</p>
             <h3 class="heading-section-secondary">
@@ -425,8 +469,8 @@
             </h3>
             <p class="projects-description">
               <em>CORRCLUSTERING ∈ NP</em><br />In this project, I created an
-              instance of the CORRCLUSTERING problem and performed a
-              polynomial-time reduction to SAT. I obtained a propositional
+              instance of the <code>CORRCLUSTERING</code> problem and performed a
+              polynomial-time reduction to <strong>SAT</strong>. I obtained a propositional
               formula by reducing the problem to the HARD and SOFT clauses
               described in the paper published in 2013 by
               <strong>Jeremias Berg</strong> and
@@ -440,13 +484,6 @@
               class="btn btn--full margin-right-sm"
               >Learn more</a
             >
-          </div>
-          <div class="projects-img-box">
-            <img
-              src="img/sat.webp"
-              alt="Pile of cans with binary numbers."
-              class="project-img"
-            />
           </div>
         </div>
       </section>
